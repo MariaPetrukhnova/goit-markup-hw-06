@@ -366,10 +366,15 @@
                     </ul>
                 </div>
                 <form class="footer-form">
-                    <label class="form-title">Підпишіться на розсилку
-                        <input type="email" placeholder="E-mail" name="email" class="footer-input">
-                    </label>
-                    <button type="submit" class="footer-btn">Підписатися</button>
+                    <label class="form-title" for="footer-subscribe">Підпишіться на розсилку</label>
+                    <div class="flex-block">
+                        <input type="email" placeholder="E-mail" name="email" class="footer-input" id="footer-subscribe">
+                        <button type="submit" class="footer-btn">Підписатися
+                            <svg class="send-icon" width="24" height="24">
+                                <use href="./images/symbol-defs.svg#send"></use>
+                            </svg>
+                        </button>
+                    </div>
                 </form>
             </div>    
         </footer>
