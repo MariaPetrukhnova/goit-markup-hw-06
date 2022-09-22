@@ -639,18 +639,22 @@ img {
     border-color: var(--modal-btn);
     background-color: var(--white-color);
     padding: 0;
+    outline: none;
+    box-shadow: none;
+
 }
 
 .close-icon {
     width: 18px;
     height: 18px;
     fill: var(--black-color);
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover .close-icon,
 .modal-close:focus .close-icon,
 .modal-close:active .close-icon { 
-    border-color: var(--modal-btn);
     fill: var(--accent-color);
 }
 
@@ -682,10 +686,12 @@ img {
     border-radius: 4px;
     outline: none;
     box-shadow: none;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.input-area:focus,
-.input-area:active {
+.input-area:focus, .input-area:active,
+.comment-area:focus, .comment-area:active {
     border: 1px solid var(--accent-color);
 }
 
@@ -698,6 +704,8 @@ img {
     position: absolute;
     top: 29px;
     left: 12px;
+
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comment-area {
@@ -709,6 +717,10 @@ img {
     border: 1px solid var(--modal-input-border);
     border-radius: 4px;
     resize: none;
+    outline: none;
+    box-shadow: none;
+
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .comment-area::placeholder {
@@ -716,13 +728,6 @@ img {
     line-height: 1.17;
     letter-spacing: 0.01em;
     color: var(--modal-placeholder);
-}
-
-.input-label:focus .input-area, 
-.input-label:active .input-area,
-.input-label:focus .comment-area,
-.input-label:active .comment-area {
-    border: 1px solid var(--accent-color);
 }
 
 .modal-checkbox {
